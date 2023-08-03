@@ -2,6 +2,7 @@ from django.urls import path
 from rest_framework_simplejwt import views as jwt_views
 from .views import ObtainTokenPairWithColorView, CustomUserCreate, HelloWorldView
 
+
 urlpatterns = [
     path('user/create/', CustomUserCreate.as_view(), name="create_user"),
     path('token/obtain/', ObtainTokenPairWithColorView.as_view(), name='token_create'),
